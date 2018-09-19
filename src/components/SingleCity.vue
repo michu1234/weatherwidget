@@ -2,7 +2,7 @@
   <div class="singlecity">
               <v-layout row wrap mb-2>
             <v-flex xs12>
-              <v-card color="purple" class="white--text">
+              <v-card color="yellow lighten-5" class="dark--text">
                 <v-layout row>
                   <v-flex xs7>
                     <v-card-title primary-title>

@@ -9,7 +9,8 @@
 </template>
 
 <script>
-    import $ from 'jquery'
+    import $ from 'jquery';
+    import { mapActions } from 'vuex'
 
     export default {
         data() {
@@ -18,15 +19,23 @@
                 placeholder: 'Choose one city'
             }
         },
+        methods: {
+            ...mapActions([
+                'fetchWeatherData'
+            ])
+        },
         props: ['options', 'value'],
         watch: {
             selected() {
-                this.$emit("input", this.selected);
+                this.fetchWeatherData(this.selected.value);
+                   
             }
         }
     }
 </script>
 
 <style>
-
+.v-select .open-indicator {
+    margin-top: -5px;
+}
 </style>

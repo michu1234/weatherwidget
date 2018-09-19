@@ -3,13 +3,12 @@ import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import vuex from 'vuex'
-import axios from 'axios'
-
+import store from './store'
 import AmCharts from 'amcharts3'
 import AmSerial from 'amcharts3/amcharts/serial'
+import axios from 'axios'
 
 global.axios = axios;
-
 
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
@@ -19,5 +18,5 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   router,
-  vuex
+  store
 }).$mount('#app')

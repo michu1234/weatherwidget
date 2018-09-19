@@ -3,13 +3,17 @@
 </template>
 
 <script>
-
-
-
+import { mapState } from 'vuex'
 
 export default {
+computed: {
+  ...mapState([
+    'chartData'
+  ])
+},
 mounted() {
-AmCharts.makeChart("chartdiv",
+
+ let chart = AmCharts.makeChart("chartdiv",
       {
         "type": "serial",
         "categoryField": "type",
@@ -24,11 +28,26 @@ AmCharts.makeChart("chartdiv",
         ],
 
         "dataProvider": [
-          { "type": "Margherita", "sold": 120 },
-          { "type": "Funghi", "sold": 82 },
-          { "type": "Capricciosa", "sold": 78 },
-          { "type": "Quattro Stagioni", "sold": 71 }
-        ]
+             this.chartData
+        ],
+        "allLabels": [{
+    "text": "Temperature",
+    "x": "!20",
+    "y": "!60",
+    "width": "50%",
+    "size": 15,
+    "bold": true,
+    "align": "right"
+  },{
+    "text": "Celsius degree",
+    "rotation": 270,
+    "x": "10",
+    "y": "0",
+    "width": "50%",
+    "size": 15,
+    "bold": true,
+    "align": "right"
+  }],
       }
     );
 
