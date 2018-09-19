@@ -8,13 +8,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/weatherwidget',
       name: 'weatherwidget',
       component: WeatherWidget
     }
-  ]
+  ],
+  mode: 'history'
 })
