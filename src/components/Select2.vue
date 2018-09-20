@@ -9,7 +9,6 @@
 </template>
 
 <script>
-    import $ from 'jquery';
     import { mapActions } from 'vuex'
 
     export default {
@@ -28,7 +27,7 @@
         watch: {
             selected() {
                if(this.selected)
-                  this.fetchWeatherData(this.selected.value);  
+                  this.fetchWeatherData(this.selected.value);
             }
         }
     }

@@ -19,7 +19,7 @@
               </v-card-title>
             </v-flex>
             <v-flex xs5>
-              <v-img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/weather-icon.png" height="125px"
+              <v-img :src="weatherIcon" height="125px"
                 contain></v-img>
             </v-flex>
           </v-layout>
@@ -61,12 +61,13 @@
       ...mapState([
         'windSpeed',
         'airPressure',
-        'humidity'
+        'humidity',
+        'weatherIcon'
       ])
     },
     filters: {
       unit(data, unit) {
-        return `${data} ${unit}`
+        return `${data}${unit}`
       }
     }
   }

@@ -8,7 +8,12 @@
       </v-toolbar>
       <v-container fluid grid-list-lg>
         <vue-select :options="options" class="mb-4"></vue-select>
-        <single-city />
+        <div v-if="runSpinner" class="text-xs-center">            <v-progress-circular
+      indeterminate
+      color="amber"
+    ></v-progress-circular></div>
+
+        <single-city v-if="windSpeed"/>
       </v-container>
     </div>
   </div>
@@ -17,9 +22,7 @@
 <script>
   import SingleCity from '@/components/SingleCity.vue';
   import Select2 from '@/components/Select2.vue';
-  import {
-    mapState
-  } from 'vuex';
+  import { mapState } from 'vuex';
 
   export default {
     name: 'singlecity',
@@ -29,7 +32,9 @@
     },
     computed: {
       ...mapState([
-        'options'
+        'options',
+        'windSpeed',
+        'runSpinner'
       ])
     }
   }
