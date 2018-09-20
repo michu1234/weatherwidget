@@ -27,8 +27,8 @@
         props: ['options', 'value'],
         watch: {
             selected() {
-                this.fetchWeatherData(this.selected.value);
-                   
+               if(this.selected)
+                  this.fetchWeatherData(this.selected.value);  
             }
         }
     }

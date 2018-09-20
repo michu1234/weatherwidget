@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -18,44 +19,60 @@ export default new Vuex.Store({
         value: 'berlin'
       }
     ],
-    chartData: [ {'label': 'Minimum', 'value': 345},
-{'label': 'Minimum2', 'value': 345}]
+    chartData: [],
+    windSpeed: '',
+    humidity: '',
+    airPressure: ''
   },
   mutations: {
-    addCityWeather(state, payload) {
-      state.chartData.push(...payload);
-      console.log(state.chartData)
+    addChartData(state, payload) {
+      state.chartData = [...payload];
+    },
+    addWeatherData(state, payload) {
+      state.windSpeed = payload[0].toFixed();
+      state.humidity = payload[1].toFixed();
+      state.airPressure = payload[2].toFixed();
     }
   },
   actions: {
-    async fetchWeatherData({commit},payload) {
+    async fetchWeatherData({
+      commit
+    }, payload) {
+      try {
+        const woeid2 = await axios.get(
+          `${'https://cors-anywhere.herokuapp.com/'}https://www.metaweather.com/api/location/search/?query=warsaw`
+        );
+        var response = await axios.get(
+          `${'https://cors-anywhere.herokuapp.com/'}https://www.metaweather.com/api/location/${woeid2.data[0].woeid}/2018/8/13/`
+        )
+        var minTemp = response.data[0].min_temp;
+        var maxTemp = response.data[0].max_temp;
+        var windSpeed = response.data[0].wind_speed;
+        var humidity = response.data[0].humidity;
+        var airPressure = response.data[0].air_pressure;
 
-      // console.log('data:' + payload);
-        try {
-          const woeid2 = await axios.get(
-            `${'https://cors-anywhere.herokuapp.com/'}https://www.metaweather.com/api/location/search/?query=warsaw`
-          );
-          var response = await axios.get(
-            `${'https://cors-anywhere.herokuapp.com/'}https://www.metaweather.com/api/location/${woeid2.data[0].woeid}/2018/8/13/`
-          )
-          var minTemp = response.data[0].min_temp;
-          var maxTemp = response.data[0].max_temp;
+        commit('addChartData', [{
+            "type": "Minimum",
+            "sold": minTemp
+          },
+          {
+            "type": "Maximum",
+            "sold": maxTemp
+          }
+        ])
 
-          console.log(minTemp, maxTemp);
+        commit('addWeatherData', [windSpeed, humidity, airPressure])
 
-          commit('addCityWeather', [
-            {'label': 'Minimum', 'value': parseInt(minTemp)},
-            {'label': 'Maximum', 'value': parseInt(maxTemp)},
-          ])
-        } catch (error) {
-          console.error(error);
-        }
+      } catch (error) {
+        /* eslint-disable-next-line no-console */
+        console.error(error);
+      }
 
 
-        // context.commit('addCityWeather', [
-        // { "type": "Lowest", "sold": minTemp },
-        // { "type": "Highest", "sold": maxTemp }
-        // ])
+      // context.commit('addCityWeather', [
+      // { "type": "Lowest", "sold": minTemp },
+      // { "type": "Highest", "sold": maxTemp }
+      // ])
 
     }
   }
