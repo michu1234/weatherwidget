@@ -8,12 +8,13 @@
       </v-toolbar>
       <v-container fluid grid-list-lg>
         <vue-select :options="options" class="mb-4"></vue-select>
-        <div v-if="runSpinner" class="text-xs-center">            <v-progress-circular
+        <div v-show="spinner" class="text-xs-center mb-4">            <v-progress-circular
       indeterminate
       color="amber"
     ></v-progress-circular></div>
-
-        <single-city v-if="windSpeed"/>
+  <transition name="fade">
+        <single-city v-show="showWeather"/>
+          </transition>
       </v-container>
     </div>
   </div>
@@ -34,7 +35,8 @@
       ...mapState([
         'options',
         'windSpeed',
-        'runSpinner'
+        'spinner',
+        'showWeather'
       ])
     }
   }
@@ -44,4 +46,11 @@
   .weatherapp__city {
     min-width: 120px;
   }
+
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>

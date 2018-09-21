@@ -24,16 +24,21 @@ export default new Vuex.Store({
     humidity: '',
     airPressure: '',
     weatherIcon: '',
-    runSpinner: false
+    spinner: false,
+    showWeather: false
   },
   mutations: {
     addChartData(state, payload) {
+      state.showWeather = true;
       state.chartData = [...payload];
     },
     addWeatherData(state, payload) {
       state.windSpeed = payload[0].toFixed();
       state.humidity = payload[1].toFixed();
       state.airPressure = payload[2].toFixed();
+    },
+    runSpinner(state) {
+      state.spinner =! state.spinner;
     },
     addWeatherIcon(state, payload) {
       switch (payload) {
@@ -103,8 +108,9 @@ export default new Vuex.Store({
 
         commit('addWeatherData', [windSpeed, humidity, airPressure]);
         commit('addWeatherIcon', weatherSymbol);
+        commit('runSpinner');
 
-
+        
       } catch (error) {
         /* eslint-disable-next-line no-console */
         console.error(error);

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex'
+    import { mapActions, mapMutations } from 'vuex'
 
     export default {
         data() {
@@ -21,13 +21,21 @@
         methods: {
             ...mapActions([
                 'fetchWeatherData'
+            ]),
+            ...mapMutations([
+                'runSpinner'
             ])
         },
         props: ['options', 'value'],
         watch: {
             selected() {
-               if(this.selected)
-                  this.fetchWeatherData(this.selected.value);
+               if(this.selected !== null){
+                                     this.fetchWeatherData(this.selected.value);
+                this.runSpinner();
+                  console.log(this.selected);
+               }
+
+
             }
         }
     }
