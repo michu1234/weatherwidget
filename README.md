@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://getbootstrap.com/">
-    <img src="https://preview.ibb.co/ii62bp/102.jpg" alt="Bootstrap logo" width=250>
+  <a href="#">
+    <img src="https://preview.ibb.co/ii62bp/102.jpg" alt="WW" width=200>
   </a>
 
   <h3 align="center">WEATHER WIDGET</h3>
@@ -8,26 +8,26 @@
   <p align="center">
     Sleek, intuitive, and powerful front-end framework for faster and easier web development.
     <br>
-    <a href="https://getbootstrap.com/docs/4.1/"><strong>TRY it Out! »</strong></a>
+    <a href="#"><strong>TRY it Out! »</strong></a>
     <br>
     <br>
-        <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">GRID CSS based</a>
+        <a href="#">Vue.js</a>
     ·
-    <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">SCSS friendly</a>
+    <a href="#">Vuetify</a>
     ·
-    <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">CSS variables on board</a>
+    <a href="#">Select2</a>
     ·
-    <a href="https://themes.getbootstrap.com/">Well-known Bootstrap classes</a>
+    <a href="#">amCharts 3</a>
     ·
-    <a href="https://jobs.getbootstrap.com/">REM for fonts</a>
+    <a href="#">metaweather.com API</a>
     ·
-    <a href="https://blog.getbootstrap.com/">Fully customizable</a>
+    <a href="#">Fully customizable</a>
     ·
-    <a href="https://blog.getbootstrap.com/">Easy to themify</a>
+    <a href="#">Easy to transform</a>
     ·
-    <a href="https://blog.getbootstrap.com/">Clean structure</a>
+    <a href="#">Clean structure</a>
     ·
-    <a href="https://blog.getbootstrap.com/">Works great with Vue.js</a>
+    <a href="#">Works great with Vue.js apps</a>
   </p>
 </p>
 
