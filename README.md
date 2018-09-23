@@ -1,39 +1,42 @@
 <p align="center">
-    <a href="https://getbootstrap.com/">
-        <img src="https://preview.ibb.co/ii62bp/102.jpg" alt="Weather Widget" width=250>
-    </a>
-    <p align="center><img src=" https://image.ibb.co/d9xVU9/rain.png" width=250>
-        <img src="https://image.ibb.co/n8Kc99/sun.png" width=250> </p>
-    <h3 align="center">Weather Widget</h3>
+  <a href="https://getbootstrap.com/">
+    <img src="https://github.com/michu1234/brown_boxed_bear/blob/master/img/Panda.jpg?raw=true" alt="Bootstrap logo" width=250>
+  </a>
 
-    <p align="center">
-        Sleek, intuitive weather widget built with Vue.js, Vuetify, Select2 and amCharts 3.
-        <br>
-        <a href="https://getbootstrap.com/docs/4.1/"><strong>TRY it Out! »</strong></a>
-        <br>
-        <br>
-        <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Vuetify</a>
-        ·
-        <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">Vue.js</a>
-        ·
-        <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">Select2</a>
-        ·
-        <a href="https://themes.getbootstrap.com/">amCharts</a>
-        ·
-        <a href="https://jobs.getbootstrap.com/">metaweather.com API/</a>
-        ·
-        <a href="https://blog.getbootstrap.com/">Fully customizable</a>
-        ·
-        <a href="https://blog.getbootstrap.com/">Clean structure</a>
+  <h3 align="center">WEATHER WIDGET</h3>
 
-    </p>
+  <p align="center">
+    Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+    <br>
+    <a href="https://getbootstrap.com/docs/4.1/"><strong>TRY it Out! »</strong></a>
+    <br>
+    <br>
+        <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">GRID CSS based</a>
+    ·
+    <a href="https://github.com/twbs/bootstrap/issues/new?template=bug.md">SCSS friendly</a>
+    ·
+    <a href="https://github.com/twbs/bootstrap/issues/new?template=feature.md&labels=feature">CSS variables on board</a>
+    ·
+    <a href="https://themes.getbootstrap.com/">Well-known Bootstrap classes</a>
+    ·
+    <a href="https://jobs.getbootstrap.com/">REM for fonts</a>
+    ·
+    <a href="https://blog.getbootstrap.com/">Fully customizable</a>
+    ·
+    <a href="https://blog.getbootstrap.com/">Easy to themify</a>
+    ·
+    <a href="https://blog.getbootstrap.com/">Clean structure</a>
+    ·
+    <a href="https://blog.getbootstrap.com/">Works great with Vue.js</a>
+  </p>
 </p>
 
 <br>
 
-
 ## Quick start
 
+### Build Setup /
+ 
 ``` bash
 # install dependencies
 npm install
@@ -47,6 +50,7 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
 
 ## Creators
 
