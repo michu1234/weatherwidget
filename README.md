@@ -6,7 +6,7 @@
   <h3 align="center">WEATHER WIDGET</h3>
 
   <p align="center">
-    Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+    Sleek, intuitive weather widget, build with Vue.js and some additional libraries.
     <br>
     <a href="#"><strong>TRY it Out! »</strong></a>
     <br>
