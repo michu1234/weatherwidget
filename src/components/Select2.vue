@@ -32,7 +32,6 @@
                if(this.selected !== null){
                                      this.fetchWeatherData(this.selected.value);
                 this.runSpinner();
-                  console.log(this.selected);
                }
 
 
