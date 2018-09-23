@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getbootstrap.com/">
-    <img src="https://github.com/michu1234/brown_boxed_bear/blob/master/img/Panda.jpg?raw=true" alt="Bootstrap logo" width=250>
+    <img src="https://preview.ibb.co/ii62bp/102.jpg" alt="Bootstrap logo" width=250>
   </a>
 
   <h3 align="center">WEATHER WIDGET</h3>
@@ -35,7 +35,7 @@
 
 ## Screenshots
 
-<p align="center"><img src="https://image.ibb.co/d9xVU9/rain.png" alt="WW" width=250></p>
+<p align="center"><img src="https://image.ibb.co/d9xVU9/rain.png" alt="WW" width=250><img src="https://image.ibb.co/n8Kc99/sun.png" alt="WW" width=250></p>
 
 ## Quick start
 
